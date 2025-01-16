@@ -16,11 +16,7 @@ async function verify(clientId, token) {
     audience: clientId
   });
 
-  const payload = ticket.getPayload();
-
-  console.log(payload);
-
-  return payload;
+  return ticket.getPayload();
 }
 
 app.use(bodyParser.json());
